@@ -21,7 +21,7 @@ def write_to_csv(data):
         csv_writer = csv.writer(database2, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         csv_writer.writerow([name,email,subject,message])
 
-
+@app.route('/favicon.ico')
 @app.route("/")
 def my_home():
     return render_template('index.html')
