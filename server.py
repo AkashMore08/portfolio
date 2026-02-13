@@ -31,17 +31,17 @@ def my_home():
 def html_page(page_name):
     return render_template(page_name)
 
-@app.route('/submit_form', methods=['POST', 'GET'])
-def submit_form():
-    if request.method == "POST":
-        try:
-            data = request.form.to_dict()
-            write_to_csv(data)
-            return redirect('/thankyou.html')
-        except:
-            return 'did not save to database'
-    else:
-        return "something went wrong. Try agian!"
+# @app.route('/submit_form', methods=['POST', 'GET'])
+# def submit_form():
+#     if request.method == "POST":
+#         try:
+#             data = request.form.to_dict()
+#             write_to_csv(data)
+#             return redirect('/thankyou.html')
+#         except:
+#             return 'did not save to database'
+#     else:
+#         return "something went wrong. Try agian!"
 
 
 # @app.route("/index.html")
